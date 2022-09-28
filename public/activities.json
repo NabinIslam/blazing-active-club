@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "img": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    "activityName": "University Class",
+    "timeRequired": "3hrs"
+  },
+  {
+    "id": "2",
+    "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "activityName": "Coding",
+    "timeRequired": "2hrs"
+  },
+  {
+    "id": "3",
+    "img": "https://images.unsplash.com/photo-1652558973276-7c57960f50cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    "activityName": "Playing Carrom Board",
+    "timeRequired": "1hr"
+  },
+  {
+    "id": "4",
+    "img": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "activityName": "Group Study",
+    "timeRequired": "3hrs"
+  },
+  {
+    "id": "5",
+    "img": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "activityName": "Gyming",
+    "timeRequired": "1hrs"
+  },
+  {
+    "id": "6",
+    "img": "https://images.unsplash.com/photo-1444210971048-6130cf0c46cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+    "activityName": "Hangout with friends",
+    "timeRequired": "3hrs"
+  }
+]
