@@ -2,6 +2,7 @@ import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import Activity from './components/Activity/Activity';
+import QnA from './components/QnA/QnA';
 import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             ></Activity>
           ))}
         </div>
+        <QnA></QnA>
       </div>
       <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 p-0">
         <Sidebar activityTime={activityTime}></Sidebar>

@@ -29,17 +29,12 @@ const Sidebar = ({ activityTime }) => {
 
   return (
     <div className="bg-muted h-100 p-5" style={{ background: '#f5f5f5' }}>
-      <div className="card mb-3" style={{ maxWidth: '100%' }}>
+      <div className="card mb-3 shadow" style={{ maxWidth: '100%' }}>
         <div className="row g-0">
-          <div className="col-md-2">
-            <img
-              src={DisplayPicture}
-              className="img-fluid rounded-start"
-              width={100}
-              height={100}
-            />
+          <div className="col-md-4">
+            <img src={DisplayPicture} className="rounded-start" height={100} />
           </div>
-          <div className="col-md-10">
+          <div className="col-md-8">
             <div className="card-body">
               <h5 className="card-title">Nabin Islam</h5>
               <p className="card-text">
@@ -50,7 +45,7 @@ const Sidebar = ({ activityTime }) => {
           </div>
         </div>
       </div>
-      <div className="row bg-white p-4 rounded-5">
+      <div className="row bg-white p-4 rounded-5 shadow">
         <div className="col text-center">
           <h3>49kg</h3>
           <p>Weight</p>
@@ -65,7 +60,7 @@ const Sidebar = ({ activityTime }) => {
         </div>
       </div>
       <h4 className="mt-3">Add a break</h4>
-      <div className="row text-center bg-white p-4 rounded-5">
+      <div className="row text-center bg-white p-4 rounded-5 shadow">
         {pauses.map(pause => (
           <div className="col" key={pause.id}>
             <button
@@ -80,15 +75,18 @@ const Sidebar = ({ activityTime }) => {
         ))}
       </div>
       <h4 className="mt-3">Activity Details</h4>
-      <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4">
+      <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4 shadow">
         <h5>Activity time</h5>
         <h5 className="fw-light">{totalActivityTime}hrs</h5>
       </div>
-      <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4">
+      <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4 shadow">
         <h5>Break time</h5>
         <h5 className="fw-light">{breakTime}hrs</h5>
       </div>
-      <button className="btn btn-primary w-100 py-3" onClick={notify}>
+      <button
+        className="btn btn-primary w-100 py-3 shadow rounded-4 fs-5"
+        onClick={notify}
+      >
         Activity completed
       </button>
       <ToastContainer position="top-center" />
