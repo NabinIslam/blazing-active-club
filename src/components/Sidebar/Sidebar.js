@@ -6,10 +6,16 @@ import 'react-toastify/dist/ReactToastify.css';
 import DisplayPicture from '../../images/profile picture.jpg';
 
 const Sidebar = ({ activityTime }) => {
+  console.log(activityTime);
+  let totalActivityTime = 0;
+  for (const currentTime of activityTime) {
+    totalActivityTime = totalActivityTime + parseFloat(currentTime);
+  }
+
   const pauses = [
     { id: 1, time: 1 },
     { id: 2, time: 2 },
-    { id: 3, time: 2 },
+    { id: 3, time: 3 },
     { id: 4, time: 4 },
   ];
 
@@ -76,7 +82,7 @@ const Sidebar = ({ activityTime }) => {
       <h4 className="mt-3">Activity Details</h4>
       <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4">
         <h5>Activity time</h5>
-        <h5 className="fw-light">{activityTime}hrs</h5>
+        <h5 className="fw-light">{totalActivityTime}hrs</h5>
       </div>
       <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4">
         <h5>Break time</h5>

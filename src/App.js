@@ -1,7 +1,6 @@
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
-
 import Activity from './components/Activity/Activity';
 import Sidebar from './components/Sidebar/Sidebar';
 
@@ -14,10 +13,11 @@ function App() {
       .then(data => setActivities(data));
   }, []);
 
-  const [activityTime, setActivityTime] = useState(0);
+  const [activityTime, setActivityTime] = useState([]);
 
-  const handleAddToList = activityTime => {
-    setActivityTime(activityTime);
+  const handleAddToList = time => {
+    const newActivityTime = [...activityTime, time];
+    setActivityTime(newActivityTime);
   };
 
   return (
