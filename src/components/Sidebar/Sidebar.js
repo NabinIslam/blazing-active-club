@@ -1,6 +1,8 @@
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import DisplayPicture from '../../images/profile picture.jpg';
 
 const Sidebar = ({ activityTime }) => {
@@ -16,6 +18,8 @@ const Sidebar = ({ activityTime }) => {
   const handleBreakTime = pauseTime => {
     setBreakTime(pauseTime);
   };
+
+  const notify = () => toast("Congratulation you're done");
 
   return (
     <div className="bg-muted h-100 p-5" style={{ background: '#f5f5f5' }}>
@@ -59,7 +63,7 @@ const Sidebar = ({ activityTime }) => {
         {pauses.map(pause => (
           <div className="col" key={pause.id}>
             <button
-              className="border-0 rounded-5 p-2"
+              className="btn btn-primary border-0 rounded-5 p-2 shadow"
               onClick={() => {
                 handleBreakTime(pause.time);
               }}
@@ -78,7 +82,10 @@ const Sidebar = ({ activityTime }) => {
         <h5>Break time</h5>
         <h5 className="fw-light">{breakTime}hrs</h5>
       </div>
-      <button className="btn btn-primary w-100 py-3">Activity completed</button>
+      <button className="btn btn-primary w-100 py-3" onClick={notify}>
+        Activity completed
+      </button>
+      <ToastContainer position="top-center" />
     </div>
   );
 };
