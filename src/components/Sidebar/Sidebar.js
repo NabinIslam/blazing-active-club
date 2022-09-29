@@ -30,7 +30,7 @@ const Sidebar = ({ activityTime }) => {
 
   return (
     <div className="bg-muted h-100 p-5" style={{ background: '#f5f5f5' }}>
-      <div className="row bg-white p-4 mb-4 rounded-5">
+      <div className="row bg-white p-4 mb-4 rounded-5 shadow">
         <div className="d-flex align-items-center">
           <img src={DisplayPicture} width={70} height={70} alt="" />
           <div className="ms-3 d-flex flex-column justify-content-center">
