@@ -78,7 +78,12 @@ const Sidebar = ({ activityTime }) => {
       </div>
       <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4 shadow">
         <h5>Break time</h5>
-        <h5 className="fw-light">{localStorage.getItem('break-time')}hrs</h5>
+        <h5 className="fw-light">
+          {!localStorage.getItem('break-time')
+            ? breakTime
+            : localStorage.getItem('break-time')}
+          hrs
+        </h5>
       </div>
       <button
         className="btn btn-primary w-100 py-3 shadow rounded-4 fs-5"
