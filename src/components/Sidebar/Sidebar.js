@@ -23,6 +23,7 @@ const Sidebar = ({ activityTime }) => {
 
   const handleBreakTime = pauseTime => {
     setBreakTime(pauseTime);
+    localStorage.setItem('break-time', pauseTime);
   };
 
   const notify = () => toast("Congratulation you're done");
@@ -81,7 +82,7 @@ const Sidebar = ({ activityTime }) => {
       </div>
       <div className="d-flex align-items-center justify-content-between p-4 bg-white rounded-5 my-4 shadow">
         <h5>Break time</h5>
-        <h5 className="fw-light">{breakTime}hrs</h5>
+        <h5 className="fw-light">{localStorage.getItem('break-time')}hrs</h5>
       </div>
       <button
         className="btn btn-primary w-100 py-3 shadow rounded-4 fs-5"
