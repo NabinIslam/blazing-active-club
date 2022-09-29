@@ -30,19 +30,15 @@ const Sidebar = ({ activityTime }) => {
 
   return (
     <div className="bg-muted h-100 p-5" style={{ background: '#f5f5f5' }}>
-      <div className="card mb-3 shadow" style={{ maxWidth: '100%' }}>
-        <div className="row g-0">
-          <div className="col-md-4">
-            <img src={DisplayPicture} className="rounded-start" height={100} />
-          </div>
-          <div className="col-md-8">
-            <div className="card-body">
-              <h5 className="card-title">Nabin Islam</h5>
-              <p className="card-text">
-                <FontAwesomeIcon icon={faLocation}></FontAwesomeIcon> Dhaka,
-                Bangladesh
-              </p>
-            </div>
+      <div className="row bg-white p-4 mb-4 rounded-5">
+        <div className="d-flex align-items-center">
+          <img src={DisplayPicture} width={70} height={70} alt="" />
+          <div className="ms-3 d-flex flex-column justify-content-center">
+            <h3>Nabin Islam</h3>
+            <p>
+              <FontAwesomeIcon icon={faLocation}></FontAwesomeIcon> Dhaka,
+              Bangladesh
+            </p>
           </div>
         </div>
       </div>

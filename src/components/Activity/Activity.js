@@ -4,7 +4,7 @@ const Activity = ({ activity, handleAddToList }) => {
   const { img, activityName, timeRequired } = activity;
 
   return (
-    <div className="col-md-4">
+    <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4">
       <div className="card shadow" style={{ width: '100%', height: '100%' }}>
         <img src={img} className="card-img-top" alt="..." />
         <div className="card-body">
