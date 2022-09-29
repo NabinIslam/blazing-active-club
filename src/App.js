@@ -13,21 +13,31 @@ function App() {
       .then(data => setActivities(data));
   }, []);
 
+  const [activityTime, setActivityTime] = useState(0);
+
+  const handleAddToList = activityTime => {
+    setActivityTime(activityTime++);
+  };
+
   return (
-    <div className="row">
+    <div className="row w-100 m-0">
       <div className="col-sm-12 col-md-8 col-lg-8 col-xl-8 p-5">
-        <h1>
+        <h1 className="text-success">
           <FontAwesomeIcon icon={faDumbbell} /> Blazing Active Club
         </h1>
-        <h2>Select today's exercise</h2>
+        <h2 className="mb-3">Select today's activity</h2>
         <div className="row g-3">
           {activities.map(activity => (
-            <Activity activity={activity} key={activity.id}></Activity>
+            <Activity
+              activity={activity}
+              key={activity.id}
+              handleAddToList={handleAddToList}
+            ></Activity>
           ))}
         </div>
       </div>
-      <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-        <Sidebar></Sidebar>
+      <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 p-0">
+        <Sidebar activityTime={activityTime}></Sidebar>
       </div>
     </div>
   );
